@@ -1,7 +1,10 @@
+
 <head>
   <link href="sheepshead.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400, 400i"/>
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+  <script src="sheepshead.js"></script>
   <meta name="viewport" content="width=device-width"/>
 </head>
 <body>
@@ -70,16 +73,65 @@
     <div class="column-con">
       <div class="column">
         <input placeholder="Player 1"/>
+        <div id="player14P" class="score"></div>
+        <div id="p1pick4P" class="picker">Picked It</div>
+        <div id="p1dd4P" class="pick-dropdown">
+          <div id="p1ws4P" class="scoring-attribute">Won (Schneider)</div>
+          <div id="p1wns4P" class="scoring-attribute">Won (No Schneider)</div>
+          <div id="p1wdt4P" class="scoring-attribute">Won (De-Tricked)</div>
+          <div id="p1ls4P" class="scoring-attribute">Lost (Schneider)</div>
+          <div id="p1lns4P" class="scoring-attribute">Lost (No Schneider)</div>
+          <div id="p1ldt4P" class="scoring-attribute">Lost (De-Tricked)</div>
+          <div id="p1rap4P" class="scoring-attribute rap">Rapped <span id="p1rapcount4P" class="rapcount"></span><span id="p1au4P" class="ion-arrow-up-b arrow"></span><span id="p1ad4P" class="ion-arrow-down-b arrow"></span></div>
+          <div class="scoring-attribute doubler4P">Doubler</div>
+        </div>
       </div>
       <div class="column">
         <input placeholder="Player 2"/>
+        <div id="player24P" class="score"></div>
+        <div id="p2pick4P" class="picker">Picked It</div>
+        <div id="p2dd4P" class="pick-dropdown">
+          <div id="p2ws4P" class="scoring-attribute">Won (Schneider)</div>
+          <div id="p2wns4P" class="scoring-attribute">Won (No Schneider)</div>
+          <div id="p2wdt4P" class="scoring-attribute">Won (De-Tricked)</div>
+          <div id="p2ls4P" class="scoring-attribute">Lost (Schneider)</div>
+          <div id="p2lns4P" class="scoring-attribute">Lost (No Schneider)</div>
+          <div id="p2ldt4P" class="scoring-attribute">Lost (De-Tricked)</div>
+          <div id="p2rap4P" class="scoring-attribute rap">Rapped <span id="p2rapcount4P" class="rapcount"></span><span id="p2au4P" class="ion-arrow-up-b arrow"></span><span id="p2ad4P" class="ion-arrow-down-b arrow"></span></div>
+          <div class="scoring-attribute doubler4P">Doubler</div>
+        </div>
       </div>
       <div class="column">
         <input placeholder="Player 3"/>
+        <div id="player34P" class="score"></div>
+        <div id="p3pick4P" class="picker">Picked It</div>
+        <div id="p3dd4P" class="pick-dropdown">
+          <div id="p3ws4P" class="scoring-attribute">Won (Schneider)</div>
+          <div id="p3wns4P" class="scoring-attribute">Won (No Schneider)</div>
+          <div id="p3wdt4P" class="scoring-attribute">Won (De-Tricked)</div>
+          <div id="p3ls4P" class="scoring-attribute">Lost (Schneider)</div>
+          <div id="p3lns4P" class="scoring-attribute">Lost (No Schneider)</div>
+          <div id="p3ldt4P" class="scoring-attribute">Lost (De-Tricked)</div>
+          <div id="p3rap4P" class="scoring-attribute rap">Rapped <span id="p3rapcount4P" class="rapcount"></span><span id="p3au4P" class="ion-arrow-up-b arrow"></span><span id="p3ad4P" class="ion-arrow-down-b arrow"></span></div>
+          <div class="scoring-attribute doubler4P">Doubler</div>
+        </div>
       </div>
       <div class="column">
         <input placeholder="Player 4"/>
+        <div id="player44P" class="score"></div>
+        <div id="p4pick4P" class="picker">Picked It</div>
+        <div id="p4dd4P" class="pick-dropdown">
+          <div id="p4ws4P" class="scoring-attribute">Won (Schneider)</div>
+          <div id="p4wns4P" class="scoring-attribute">Won (No Schneider)</div>
+          <div id="p4wdt4P" class="scoring-attribute">Won (De-Tricked)</div>
+          <div id="p4ls4P" class="scoring-attribute">Lost (Schneider)</div>
+          <div id="p4lns4P" class="scoring-attribute">Lost (No Schneider)</div>
+          <div id="p4ldt4P" class="scoring-attribute">Lost (De-Tricked)</div>
+          <div id="p4rap4P" class="scoring-attribute rap">Rapped <span id="p4rapcount4P" class="rapcount"></span><span id="p4au4P" class="ion-arrow-up-b arrow"></span><span id="p4ad4P" class="ion-arrow-down-b arrow"></span></div>
+          <div class="scoring-attribute doubler4P">Doubler</div>
+        </div>
       </div>
+      <div class="score-con"><span id="score4P" class="score">Score Hand</span></div>
     </div>
   </div>
   <div class="five-players play">
