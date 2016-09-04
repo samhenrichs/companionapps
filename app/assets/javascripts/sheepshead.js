@@ -11,7 +11,7 @@ $(document).ready(function() {
 	});
 	$('#five').click(function() {
 		$('.players').hide(0);
-		$('.three-players').fadeIn(250);
+		$('.five-players').fadeIn(250);
 	});
 	$('#six').click(function() {
 		$('.players').hide(0);
@@ -555,9 +555,9 @@ $(document).ready(function() {
 				$('#player33P').html(p3score3P);
 			}
 			else {
-				p1score4P = (p1scorechange4P * ((doubler * 2) + p1rapcount4P)) + p1score4P;
-				p2score4P = (p2scorechange4P * ((doubler * 2) + p1rapcount4P)) + p2score4P;
-				p3score4P = (p3scorechange4P * ((doubler * 2) + p1rapcount4P)) + p3score4P;
+				p1score3P = (p1scorechange3P * ((doubler * 2) + (p1rapcount3P + 1))) + p1score3P;
+				p2score3P = (p2scorechange3P * ((doubler * 2) + (p1rapcount3P + 1))) + p2score3P;
+				p3score3P = (p3scorechange3P * ((doubler * 2) + (p1rapcount3P + 1))) + p3score3P;
 				$('#player13P').html(p1score3P);
 				$('#player23P').html(p2score3P);
 				$('#player33P').html(p3score3P);	
@@ -603,9 +603,10 @@ $(document).ready(function() {
 				$('#player33P').html(p3score3P);
 			}
 			else {
-				p1score4P = (p1scorechange4P * ((doubler * 2) + p2rapcount4P)) + p1score4P;
-				p2score4P = (p2scorechange4P * ((doubler * 2) + p2rapcount4P)) + p2score4P;
-				p3score4P = (p3scorechange4P * ((doubler * 2) + p2rapcount4P)) + p3score4P;
+				console.log(p1score4P = (p1scorechange3P * ((doubler * 2) + (p2rapcount3P + 1))) + p1score3P);
+				p1score3P = (p1scorechange3P * ((doubler * 2) + (p2rapcount3P + 1))) + p1score3P;
+				p2score3P = (p2scorechange3P * ((doubler * 2) + (p2rapcount3P + 1))) + p2score3P;
+				p3score3P = (p3scorechange3P * ((doubler * 2) + (p2rapcount3P + 1))) + p3score3P;
 				$('#player13P').html(p1score3P);
 				$('#player23P').html(p2score3P);
 				$('#player33P').html(p3score3P);	
@@ -651,9 +652,9 @@ $(document).ready(function() {
 				$('#player33P').html(p3score3P);
 			}
 			else {
-				p1score4P = (p1scorechange4P * ((doubler * 2) + p3rapcount4P)) + p1score4P;
-				p2score4P = (p2scorechange4P * ((doubler * 2) + p3rapcount4P)) + p2score4P;
-				p3score4P = (p3scorechange4P * ((doubler * 2) + p3rapcount4P)) + p3score4P;
+				p1score3P = (p1scorechange3P * ((doubler * 2) + (p3rapcount3P + 1))) + p1score3P;
+				p2score3P = (p2scorechange3P * ((doubler * 2) + (p3rapcount3P + 1))) + p2score3P;
+				p3score3P = (p3scorechange3P * ((doubler * 2) + (p3rapcount3P + 1))) + p3score3P;
 				$('#player13P').html(p1score3P);
 				$('#player23P').html(p2score3P);
 				$('#player33P').html(p3score3P);	
@@ -1361,40 +1362,40 @@ $(document).ready(function() {
 	$('#score4P').click(function() {
 		if($('#p4dd4P').is(':visible')) {
 			if(p4ws4P === 1) {
-				var p1scorechange4P = 3;
+				var p4scorechange4P = 3;
 				var p2scorechange4P = -1;
 				var p3scorechange4P = -1;
-				var p4scorechange4P = -1;
+				var p1scorechange4P = -1;
 			}
 			else if(p4wns4P === 1) {
-				var p1scorechange4P = 6;
+				var p4scorechange4P = 6;
 				var p2scorechange4P = -2;
 				var p3scorechange4P = -2;
-				var p4scorechange4P = -2;
+				var p1scorechange4P = -2;
 			}
 			else if(p4wdt4P === 1) {
-				var p1scorechange4P = 9;
+				var p4scorechange4P = 9;
 				var p2scorechange4P = -3;
 				var p3scorechange4P = -3;
-				var p4scorechange4P = -3;
+				var p1scorechange4P = -3;
 			}
 			else if(p4ls4P === 1) {
-				var p1scorechange4P = -3;
+				var p4scorechange4P = -3;
 				var p2scorechange4P = 1;
 				var p3scorechange4P = 1;
-				var p4scorechange4P = 1;
+				var p1scorechange4P = 1;
 			}
 			else if(p4lns4P === 1) {
-				var p1scorechange4P = -6;
+				var p4scorechange4P = -6;
 				var p2scorechange4P = 2;
 				var p3scorechange4P = 2;
-				var p4scorechange4P = 2;
+				var p1scorechange4P = 2;
 			}
 			else if(p4ldt4P === 1) {
-				var p1scorechange4P = -9;
+				var p4scorechange4P = -9;
 				var p2scorechange4P = 3;
 				var p3scorechange4P = 3;
-				var p4scorechange4P = 3;
+				var p1scorechange4P = 3;
 			}
 
 			if(doubler === 0 && p4rapcount4P === 0) {
@@ -1406,16 +1407,18 @@ $(document).ready(function() {
 				$('#player24P').html(p2score4P);
 				$('#player34P').html(p3score4P);
 				$('#player44P').html(p4score4P);
+				console.log(p4rapcount4P + 'times');
 			}
 			else {
-				p1score4P = (p1scorechange4P * ((doubler * 2) + p4rapcount4P)) + p1score4P;
-				p2score4P = (p2scorechange4P * ((doubler * 2) + p4rapcount4P)) + p2score4P;
-				p3score4P = (p3scorechange4P * ((doubler * 2) + p4rapcount4P)) + p3score4P;
-				p4score4P = (p3scorechange4P * ((doubler * 2) + p4rapcount4P)) + p4score4P;
+				p1score4P = (p1scorechange4P * ((doubler * 2) + (p4rapcount4P + 1))) + p1score4P;
+				p2score4P = (p2scorechange4P * ((doubler * 2) + (p4rapcount4P + 1))) + p2score4P;
+				p3score4P = (p3scorechange4P * ((doubler * 2) + (p4rapcount4P + 1))) + p3score4P;
+				p4score4P = (p4scorechange4P * ((doubler * 2) + (p4rapcount4P + 1))) + p4score4P;
 				$('#player14P').html(p1score4P);
 				$('#player24P').html(p2score4P);
 				$('#player34P').html(p3score4P);
 				$('#player44P').html(p4score4P);
+				console.log(p4rapcount4P);
 			}
 		}
 		if($('#p2dd4P').is(':visible')) {
@@ -1529,7 +1532,7 @@ $(document).ready(function() {
 				p1score4P = (p1scorechange4P * ((doubler * 2) + (p3rapcount4P + 1))) + p1score4P;
 				p2score4P = (p2scorechange4P * ((doubler * 2) + (p3rapcount4P + 1))) + p2score4P;
 				p3score4P = (p3scorechange4P * ((doubler * 2) + (p3rapcount4P + 1))) + p3score4P;
-				p4score4P = (p3scorechange4P * ((doubler * 2) + (p3rapcount4P + 1))) + p4score4P;
+				p4score4P = (p4scorechange4P * ((doubler * 2) + (p3rapcount4P + 1))) + p4score4P;
 				$('#player14P').html(p1score4P);
 				$('#player24P').html(p2score4P);
 				$('#player34P').html(p3score4P);
@@ -1597,6 +1600,10 @@ $(document).ready(function() {
 		$('.pick-dropdown').slideUp(250);
 		$('.picker').css('color', '#58C9B9');
 		$('.scoring-attribute').css('color', '#58C9B9');
+		$('#p1rapcount4P').html(p4rapcount4P);
+		$('#p2rapcount4P').html(p2rapcount4P);
+		$('#p3rapcount4P').html(p3rapcount4P);
+		$('#p4rapcount4P').html(p4rapcount4P);
 		 p1picked4P = 0;
 		 p2picked4P = 0;
 		 p4picked4P = 0;

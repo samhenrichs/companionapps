@@ -154,3 +154,39 @@ html, head, body {
   font-size: 0.9rem;
   padding: 0px 0px 0px 0px;
 }
+
+@media screen and ( max-width: 1003px ) {
+  .play .column-con .column input {
+    font-size: 1.25rem;
+  }
+  .play .column-con .column .pick-dropdown .scoring-attribute {
+    font-size: 1rem;
+  }
+  .play .column-con .column .picker {
+    font-size: 1.25rem;
+  }
+}
+@media screen and ( max-height: 400px ) {
+  .play .title {
+    color: #58C9B9;
+    font-weight: 300;
+    font-size: 1.25rem;
+    padding: 5px;
+  }
+  .play .column-con .column .pick-dropdown .scoring-attribute {
+    padding: 2.5px 0px;
+  }
+  .play .column-con .column .pick-dropdown {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  .play .column-con .column .score {
+    margin-top: 5px;
+  }
+  .play .column-con .column .picker {
+    margin-top: 5px;
+  }
+  .play .column-con .column .pick-dropdown .scoring-attribute {
+    font-size: 0.9rem;
+  }
+}
